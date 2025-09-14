@@ -1,78 +1,47 @@
-import React from 'react'
-
-const Gallery = () => {
-  const images = [
-    {
-      src: '/gallery/1.jpeg',
-      title: 'Sunset View',
-      desc: 'A breathtaking sunset over the hills.',
-    },
-    {
-      src: '/gallery/2.jpeg',
-      title: 'City Lights',
-      desc: 'The city comes alive at night.',
-    },
-    {
-      src: '/gallery/3.jpeg',
-      title: 'Mountain Peaks',
-      desc: 'Snow-covered mountains touching the sky.',
-    },
-    {
-      src: '/gallery/4.jpeg',
-      title: 'Calm Beach',
-      desc: 'Waves gently hitting the golden sand.',
-    },
-    {
-      src: '/gallery/5.jpeg',
-      title: 'Forest Path',
-      desc: 'A peaceful walk through the woods.',
-    },
-    {
-      src: '/gallery/6.jpeg',
-      title: 'Desert Dunes',
-      desc: 'Golden dunes shaped by the wind.',
-    },
-    {
-      src: '/gallery/7.jpeg',
-      title: 'Flower Field',
-      desc: 'Endless fields of colorful blossoms.',
-    },
-    {
-      src: '/gallery/8.jpeg',
-      title: 'Ancient Temple',
-      desc: 'A glimpse into history and culture.',
-    },
-    {
-      src: '/gallery/9.jpeg',
-      title: 'Starry Night',
-      desc: 'The Milky Way shining bright above.',
-    },
-  ]
-
+export default function Gallery() {
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold mb-6 text-center">Our Gallery</h1>
+    <>
+      <div className="my-10 min-h-screen w-full px-60">
 
-      <div className="grid grid-cols gap-6">
-        {images.map((item, index) => (
-          <div
-            key={index}
-            className="overflow-hidden rounded-2xl shadow-lg bg-white"
-          >
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+          * {
+            font-family: 'Poppins', sans-serif;
+          }
+        `}</style>
+
+        <h1 className="text-3xl font-semibold text-center">
+          Our Latest Memories
+        </h1>
+
+        <p className="text-sm text-slate-500 text-center mt-2">
+          A visual collection of our most recent works - each piece crafted with
+          intention, emotion, and style.
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center mt-12 gap-4">
+          <div className="relative group rounded-lg overflow-hidden">
             <img
-              src={item.src}
-              alt={item.title}
-              className="w-full h-64 object-cover hover:scale-110 transition-transform duration-300"
+              src="https://images.unsplash.com/photo-1719368472026-dc26f70a9b76?q=80&w=736&auto=format&fit=crop"
+              alt="image"
+              className="h-56 w-auto object-cover object-top"
             />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p className="text-gray-600">{item.desc}</p>
+            <div className="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h1 className="text-xl font-medium">Image Title</h1>
+              <a
+                href="#"
+                className="flex items-center gap-1 text-sm text-white/70"
+              >
+                Show More
+                {/* SVG here */}
+              </a>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  )
-}
 
-export default Gallery
+          {/* Repeat other images similarly */}
+        </div>
+      </div>
+    </>
+  );
+}

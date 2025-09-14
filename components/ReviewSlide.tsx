@@ -1,0 +1,57 @@
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+const reviews = [
+  { id: 1, name: "Aarav Sharma", city: "Pokhara", review: "The trip was well-organized, and I loved how friendly everyone was. Definitely coming back!", img: "/1.jpg" },
+  { id: 2, name: "Sofia Martinez", city: "Kathmandu", review: "Beautiful views and unforgettable experiences. I enjoyed every single moment.", img: "/2.jpg" },
+  { id: 3, name: "Liam Johnson", city: "Chitwan", review: "A perfect blend of adventure and relaxation. Highly recommend to travelers of all ages.", img: "/3.jpg" },
+  { id: 4, name: "Maya Thapa", city: "Bhaktapur", review: "The cultural richness of this place was amazing. I felt so connected to the local traditions.", img: "/4.jpg" },
+  { id: 5, name: "Ethan Wilson", city: "Butwal", review: "Everything from food to transport was smooth. Super impressed with the planning.", img: "/5.jpg" },
+  { id: 6, name: "Isabella Rossi", city: "Dharan", review: "The people here made me feel so welcome. It’s one of the best trips I’ve ever had.", img: "/6.jpg" },
+  { id: 7, name: "Noah Kim", city: "Lalitpur", review: "Amazing service, comfortable stay, and wonderful memories. Couldn’t ask for more!", img: "/7.jpg" },
+  { id: 8, name: "Aanya Patel", city: "Janakpur", review: "Traveling here was a dream come true. The landscapes were absolutely stunning.", img: "/8.jpg" },
+  { id: 9, name: "Oliver Brown", city: "Biratnagar", review: "I was impressed with the attention to detail. Every day felt like a new adventure.", img: "/9.jpg" },
+  { id: 10, name: "Hana Suzuki", city: "Hetauda", review: "Such a refreshing experience! I met wonderful people and enjoyed every bit of it.", img: "/10.jpg" },
+];
+
+export default function ReviewSlide() {
+  return (
+    <div className="mt-20 mb-20 px-4">
+      <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">What People Say</h1>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        loop={true}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        modules={[Pagination, Autoplay]}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {reviews.map((r) => (
+          <SwiperSlide key={r.id}>
+            <div className="bg-white shadow-lg rounded-2xl p-6 text-center flex flex-col items-center">
+              <p className="text-gray-700 italic mb-4 leading-relaxed">“{r.review}”</p>
+              <img
+                src={r.img}
+                alt={r.name}
+                className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-gray-200 mb-2"
+              />
+              <h2 className="font-semibold text-gray-800">
+                <span className="italic">{r.name}</span>{" "}
+                <span className="text-gray-500">from {r.city}</span>
+              </h2>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}

@@ -4,6 +4,12 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer1 from "@/components/Footer1";
 import { Toaster } from "react-hot-toast";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // you can choose weights
+});
 
 
 const geistSans = Geist({
@@ -28,10 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
+            <body className={poppins.className}>
+
+         <Navbar/> 
          <Toaster position="top-center" reverseOrder={false}
  />
 

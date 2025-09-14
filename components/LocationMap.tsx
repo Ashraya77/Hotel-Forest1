@@ -17,7 +17,7 @@ const LocationMap: React.FC<LocationMapProps> = ({
 }) => {
   return (
     <div className=" mx-auto mt-12 bg-white rounded-2xl p-6 shadow-md text-center">
-      <h2 className="text-xl font-bold text-green-700 mb-4">{title}</h2>
+      <h2 className="text-3xl font-bold text-green-700 mb-4">{title}</h2>
       <p className="text-gray-700 mb-4">{address}</p>
       <div className={`${height} w-full rounded-lg overflow-hidden`}>
         <iframe

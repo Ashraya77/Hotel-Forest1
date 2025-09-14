@@ -1,78 +1,57 @@
-import React from 'react'
+"use client";
+import React from "react";
 
 const Gallery = () => {
   const images = [
-    {
-      src: '/gallery/1.jpeg',
-      title: 'Sunset View',
-      desc: 'A breathtaking sunset over the hills.',
-    },
-    {
-      src: '/gallery/2.jpeg',
-      title: 'City Lights',
-      desc: 'The city comes alive at night.',
-    },
-    {
-      src: '/gallery/3.jpeg',
-      title: 'Mountain Peaks',
-      desc: 'Snow-covered mountains touching the sky.',
-    },
-    {
-      src: '/gallery/4.jpeg',
-      title: 'Calm Beach',
-      desc: 'Waves gently hitting the golden sand.',
-    },
-    {
-      src: '/gallery/5.jpeg',
-      title: 'Forest Path',
-      desc: 'A peaceful walk through the woods.',
-    },
-    {
-      src: '/gallery/6.jpeg',
-      title: 'Desert Dunes',
-      desc: 'Golden dunes shaped by the wind.',
-    },
-    {
-      src: '/gallery/7.jpeg',
-      title: 'Flower Field',
-      desc: 'Endless fields of colorful blossoms.',
-    },
-    {
-      src: '/gallery/8.jpeg',
-      title: 'Ancient Temple',
-      desc: 'A glimpse into history and culture.',
-    },
-    {
-      src: '/gallery/9.jpeg',
-      title: 'Starry Night',
-      desc: 'The Milky Way shining bright above.',
-    },
-  ]
+    "/gallery/1.jpg",
+    "/gallery/2.jpg",
+    "/gallery/3.jpg",
+    "/gallery/4.jpg",
+    "/gallery/5.jpg",
+    "/gallery/6.jpg",
+    "/gallery/7.jpg",
+    "/gallery/8.jpg",
+    "/gallery/9.jpg",
+    "/gallery/10.jpg",
+    "/gallery/11.jpg",
+    "/gallery/12.jpg",
+    "/gallery/13.jpg",
+    "/gallery/14.jpg",
+    "/gallery/15.jpg",
+    "/gallery/16.jpg",
+    "/gallery/17.jpg",
+    "/gallery/18.jpg",
+    "/gallery/19.jpg",
+    "/gallery/20.jpg",
+    "/gallery/21.jpg",
+    "/gallery/22.jpg",
+    "/gallery/23.jpg",
+  ];
 
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold mb-6 text-center">Our Gallery</h1>
+    <div className="min-h-screen bg-gray-50 py-10 px-5 md:px-20 mx-60">
+      <h1 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-10">
+        OUR MEMORIES
+      </h1>
 
-      <div className="grid grid-cols-3 gap-6">
-        {images.map((item, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {images.map((src, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-2xl shadow-lg bg-white"
+            className={`overflow-hidden rounded-2xl ${
+              index % 4 === 0 ? "row-span-2" : ""
+            }`}
           >
             <img
-              src={item.src}
-              alt={item.title}
-              className="w-full h-64 object-cover hover:scale-110 transition-transform duration-300"
+              src={src}
+              alt={`Gallery ${index + 1}`}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p className="text-gray-600">{item.desc}</p>
-            </div>
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

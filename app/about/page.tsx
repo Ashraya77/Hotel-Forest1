@@ -1,24 +1,27 @@
 "use client";
 import React from "react";
-
+import { Trees, Heater, Mail } from "lucide-react";
 const About = () => {
   return (
-    <div className="bg-gray-50 text-gray-800">
-      {/* Heading */}
-      <div className="text-center py-20 px-5 md:px-40">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-green-800 mb-4">
-          About Hotel Forest
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          A place where comfort meets nature, and every stay feels like home.
-        </p>
+    <div className="w-full">
+      <div className="relative w-full h-[400px] md:h-[500px] pb-10">
+        <img  className="w-full h-full object-cover brightness-50" src="21.jpg" alt="" />
+        {/* Heading */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
+            About Hotel Forest
+          </h1>
+          <p className="max-w-xl">
+            A place where comfort meets nature, and every stay feels like home.
+          </p>
+        </div>
       </div>
 
       {/* Intro Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-5 md:px-40">
         <div className="relative overflow-hidden rounded-2xl shadow-lg group">
           <img
-            src="/gallery/11.jpeg"
+            src="9.jpg"
             alt="Hotel Forest front view"
             className="rounded-2xl shadow-lg w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
           />
@@ -48,30 +51,40 @@ const About = () => {
           What We Stand For
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {[
-            {
-              title: "Comfort",
-              desc: "From soft beds to warm lighting, we make sure every detail adds to your relaxation."
-            },
-            {
-              title: "Nature",
-              desc: "Surrounded by forests and fresh air, our hotel brings you closer to the beauty of the outdoors."
-            },
-            {
-              title: "Hospitality",
-              desc: "Our staff treats every guest like family, making your stay warm and memorable."
-            }
-          ].map((value, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 bg-white"
-            >
-              <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-3">
-                {value.title}
-              </h3>
-              <p className="text-gray-600">{value.desc}</p>
-            </div>
-          ))}
+          {/* Comfort */}
+          <div className="p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 bg-white">
+            <Heater className="mx-auto mb-3 text-green-700 w-8 h-8" />
+            <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-3">
+              Comfort
+            </h3>
+            <p className="text-gray-600">
+              From soft beds to warm lighting, we make sure every detail adds to
+              your relaxation.
+            </p>
+          </div>
+
+          {/* Nature */}
+          <div className="p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 bg-white">
+            <Trees className="mx-auto mb-3 text-green-700 w-8 h-8" />{" "}
+            <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-3">
+              Nature
+            </h3>
+            <p className="text-gray-600">
+              Surrounded by forests and fresh air, our hotel brings you closer
+              to the beauty of the outdoors.
+            </p>
+          </div>
+
+          {/* Hospitality */}
+          <div className="p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 bg-white">
+            <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-3">
+              Hospitality
+            </h3>
+            <p className="text-gray-600">
+              Our staff treats every guest like family, making your stay warm
+              and memorable.
+            </p>
+          </div>
         </div>
       </div>
 
