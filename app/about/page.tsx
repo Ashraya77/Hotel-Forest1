@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="w-full">
       <div className="relative w-full h-[400px] md:h-[500px] pb-10">
-        <img  className="w-full h-full object-cover brightness-50" src="21.jpg" alt="" />
+        <img  className="w-full h-full object-cover brightness-50" src="42.jpg" alt="" />
         {/* Heading */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
@@ -21,7 +21,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-5 md:px-40">
         <div className="relative overflow-hidden rounded-2xl shadow-lg group">
           <img
-            src="9.jpg"
+            src="44.jpg"
             alt="Hotel Forest front view"
             className="rounded-2xl shadow-lg w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
           />

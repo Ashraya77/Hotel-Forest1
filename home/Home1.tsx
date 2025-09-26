@@ -45,12 +45,12 @@ const Home1 = () => {
 
         <div className="flex relative z-0 w-100 h-80">
           <img
-            src="2.jpg"
+            src="27.jpg"
             alt=""
             className="absolute top-30 right-60 w-90 h-110 object-cover rounded-lg  z-20"
           />
           <img
-            src="1.jpg"
+            src="2.jpg"
             alt=""
             className="absolute top-0 left-0 right-0 w-90 h-110 object-cover rounded-lg z-10"
           />
