@@ -9,25 +9,10 @@ import {
   Briefcase,
 
 } from "lucide-react";
+import { services , amenities} from "@/data/data";
 
 const Page = () => {
-  const services = [
-    { id: 1, img: "/47.jpg", name: "Barbeque Nights" },
-    { id: 2, img: "/1.jpg", name: "Trekking Support" },
-    { id: 3, img: "/3.jpg", name: "Cozy Lodging" },
-    { id: 4, img: "/6.jpg", name: "Pet-Friendly Stay" },
-    { id: 5, img: "/9.jpg", name: "Natural Environment" },
-    { id: 6, img: "/44.jpg", name: "Natural Environment" },
-  ];
-
-  const amenities = [
-    { id: 1, icon: Wifi, name: "Free High-Speed WiFi" },
-    { id: 2, icon: Car, name: "Free Parking" },
-    { id: 3, icon: ConciergeBell, name: "24/7 Room Service" },
-    { id: 4, icon: Utensils, name: "In-House Restaurant" },
-    { id: 5, icon: Shirt, name: "Laundry Service" },
-    { id: 6, icon: Briefcase, name: "Conference Hall" },
-  ];
+ 
 
   return (
     <div className="w-full">

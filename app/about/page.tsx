@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { Trees, Heater, Mail } from "lucide-react";
+import { ourStory } from "@/data/data";
+
 const About = () => {
   return (
     <div className="w-full">
@@ -32,11 +34,7 @@ const About = () => {
             Our Story
           </h2>
           <p className="leading-relaxed text-gray-700 mb-4 text-justify">
-            Nestled in the heart of nature, Hotel Forest was built with one idea
-            in mind: to give travelers a place where they can breathe deeply,
-            recharge, and feel inspired. Whether you’re here for a weekend
-            escape, a family holiday, or a business trip, we make sure your
-            experience is unforgettable.
+           {ourStory}
           </p>
           <p className="leading-relaxed text-gray-700 text-justify">
             With cozy rooms, fresh local cuisine, and views that remind you of
