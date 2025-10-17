@@ -12,11 +12,12 @@ import {
 
 const Page = () => {
   const services = [
-    { id: 1, img: "/7.jpg", name: "Barbeque Nights" },
+    { id: 1, img: "/47.jpg", name: "Barbeque Nights" },
     { id: 2, img: "/1.jpg", name: "Trekking Support" },
     { id: 3, img: "/3.jpg", name: "Cozy Lodging" },
     { id: 4, img: "/6.jpg", name: "Pet-Friendly Stay" },
     { id: 5, img: "/9.jpg", name: "Natural Environment" },
+    { id: 6, img: "/44.jpg", name: "Natural Environment" },
   ];
 
   const amenities = [
@@ -92,7 +93,7 @@ const Page = () => {
               key={amenity.id}
               className="flex flex-col items-center justify-center bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition"
             >
-              <Icon className="text-indigo-600 mb-3" size={36} />
+              <Icon className="text-green-800 mb-3" size={36} />
               <p className="text-center text-lg font-medium">{amenity.name}</p>
             </div>
           );

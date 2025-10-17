@@ -45,7 +45,7 @@ const Home2 = () => {
             </p>
             <Link
               href="/rooms"
-              className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-black transition"
+              className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-green-700 transition"
             >
               Explore
             </Link>
@@ -104,7 +104,7 @@ const Home2 = () => {
             </p>
             <Link
               href="/rooms"
-              className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-black transition"
+              className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-green-700 transition"
             >
               Explore
             </Link>

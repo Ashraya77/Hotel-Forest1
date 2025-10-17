@@ -7,7 +7,7 @@ const Home1 = () => {
     <div className="p-10 mt-25 pt-20 mb-0 bg-[#faf7f0] "
     >
       <img src="bg5.png"
-      className="absolute z-0 top-240 left-0 bottom-0 right-0 h-170 w-120"
+      className="absolute z-0 top-220 left-0 bottom-0 right-0 h-170 w-120"
       alt="" />
       <motion.div
         className="flex justify-around rounded-2xl pb-18 relative "
@@ -18,10 +18,10 @@ const Home1 = () => {
       >
         <div className=" py-10 max-w-800 mx-auto pl-50">
           <h1 className="text-4xl text-[#28382C] pb-10 font-bold">
-            Welcome to <br /> Hotel Forest Backpackin
+            Welcome to <br /> HOTEL FORESTWAY Hostel & Backpackers
           </h1>
           <p className="w-150 text-justify text-black ">
-            At Hotel Forest Backpacking, we believe every guest deserves a
+            At HOTEL FORESTWAY Hostel & Backpackers, we believe every guest deserves a
             memorable experience. From the moment you step into our welcoming
             lobby, you'll feel the warmth of our service and the charm of our
             nature-inspired design. Our rooms are thoughtfully crafted to

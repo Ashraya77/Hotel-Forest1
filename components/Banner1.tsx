@@ -2,14 +2,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import {words} from "@/data/data"
 
 function Banner1() {
-  const words = [
-    "for your stay here",
-    "for your comfort",
-    "for your memories",
-    "for your next trip",
-  ];
+  // const words = [
+  //   "for your stay here",
+  //   "for your comfort",
+  //   "for your memories",
+  //   "for your next trip",
+  // ];
 
   const [index, setIndex] = useState(0);
 
@@ -21,7 +22,7 @@ function Banner1() {
   }, []);
 
   return (
-    <div className="flex items-center px-4 lg:px-24 pt-35">
+    <div className="flex items-center px-4 lg:px-24 pt-35 pb-10">
       <img
         className="absolute top-0 left-0 right-0 z-0 w-full overflow-hidden object-cover h-full bg-blend-darken" 
         src="banner2.jpg"
@@ -60,7 +61,7 @@ function Banner1() {
             affordable."
           </p>
 
-          <div className="flex gap-10 py-10 relative">
+          <div className="flex gap-10 relative">
             <Link href="/rooms">
               <button className="px-6 py-3 font-bold text-white bg-green-600 rounded-lg hover:bg-green-800 transition">
                 Book Now

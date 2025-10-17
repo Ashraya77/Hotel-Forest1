@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="w-full">
       <div className="relative w-full h-[400px] md:h-[500px] pb-10">
-        <img  className="w-full h-full object-cover brightness-50" src="42.jpg" alt="" />
+        <img  className="w-full h-full object-cover brightness-50" src="28.jpg" alt="" />
         {/* Heading */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
